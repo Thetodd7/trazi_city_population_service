@@ -4,7 +4,7 @@
 This is a Node.js service that provides population data for different cities. You can get the population of a specific city, or update it with a new value.
 
 ## Getting Started
-Before starting, you'll need to have Node.js installed on your machine. This project uses Node v16.3.1.
+Before starting, you'll need to have Node.js installed on your machine. This project uses Node v18
 
 ## Installation
 First, clone this repository to your local machine using `git clone`.
