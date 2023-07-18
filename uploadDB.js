@@ -1,7 +1,7 @@
 const fs = require('fs');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const Population = require('/Users/apple/Desktop/trazi_city_population_service/src/models/populationModel');
+const Population = require('./src/models/populationModel');
 
 dotenv.config();
 
@@ -9,7 +9,10 @@ mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true, useUnifiedTo
     .then(() => console.log('Connected to MongoDB...'))
     .catch(err => console.error('Could not connect to MongoDB...', err));
 
-const data = JSON.parse(fs.readFileSync('/Users/apple/Desktop/trazi_city_population_service/city_populations.json', 'utf-8'));
+const data = JSON.parse(fs.readFileSync('city_populations.json', 'utf-8'));
+
+city_populations.json
+
 
 data.forEach(async (item) => {
     await Population.updateOne(
